@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-05T07:14:59.669Z</updated>
+  <updated>2019-03-05T13:44:55.650Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2019/03/05/Hexo-v3-8-0-NexT-Mist-v7-0-1-%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
+    <id>http://yoursite.com/2019/03/05/Hexo-v3-8-0-NexT-Mist-v7-0-1-博客优化/</id>
+    <published>2019-03-05T12:48:58.019Z</published>
+    <updated>2019-03-05T13:44:55.650Z</updated>
+    
+    <content type="html"><![CDATA[<p>title: Hexo v3.8.0 +NexT.Mist v7.0.1  博客优化<br>author: Kun<br>date: 2019-03-05 20:48:58</p><p>tags: Hexo</p><p>1、网页中插入音乐外链播放器</p><p>网页云音乐由于版权问题无法生成外链播放器</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;title: Hexo v3.8.0 +NexT.Mist v7.0.1  博客优化&lt;br&gt;author: Kun&lt;br&gt;date: 2019-03-05 20:48:58&lt;/p&gt;
+&lt;p&gt;tags: Hexo&lt;/p&gt;
+&lt;p&gt;1、网页中插入音乐外链播放器&lt;/p&gt;
+&lt;p&gt;网页云
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title></title>
