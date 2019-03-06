@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-06T07:41:12.072Z</updated>
+  <updated>2019-03-06T12:59:33.980Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,63 +17,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>page</title>
-    <link href="http://yoursite.com/2019/03/06/page/"/>
-    <id>http://yoursite.com/2019/03/06/page/</id>
-    <published>2019-03-06T07:41:12.000Z</published>
-    <updated>2019-03-06T07:41:12.072Z</updated>
+    <title>Hexo v3.8.0 +NexT.Mist v7.0.1  博客优化</title>
+    <link href="http://yoursite.com/2019/03/06/Hexo%20v3.8.0%20+NexT.Mist%20v7.0.1%20%20%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
+    <id>http://yoursite.com/2019/03/06/Hexo v3.8.0 +NexT.Mist v7.0.1  博客优化/</id>
+    <published>2019-03-06T12:21:19.000Z</published>
+    <updated>2019-03-06T12:59:33.980Z</updated>
     
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/03/05/Hexo-v3-8-0-NexT-Mist-v7-0-1-%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96/"/>
-    <id>http://yoursite.com/2019/03/05/Hexo-v3-8-0-NexT-Mist-v7-0-1-博客优化/</id>
-    <published>2019-03-05T12:48:58.019Z</published>
-    <updated>2019-03-06T09:11:49.873Z</updated>
-    
-    <content type="html"><![CDATA[<p>title: Hexo v3.8.0 +NexT.Mist v7.0.1  博客优化<br>author: Kun<br>date: 2019-03-05 20:48:58</p><p>tags: Hexo</p><p>1、给网站加上问答机器人</p><p>第一种方法，由于不会前端方面的知识，就用social，引入url取个巧吧</p><p>等以后学会JavaScript之后再写个聊天界面接入网页中吧，</p><p>另外一种方法是新建一个page , hexo new page “robot”,在根目录下产生一个robot文件夹,删除里面的index.md,然后在根目录下的public文件夹里新建一个robot文件夹，将index.html文件拷贝进去（html+css+javascript),hexo g hexo d,这也是自定义网页的方法，不过hexo clean后，public文件夹就会被清理，所以要备份你自定义的index.html文件。</p><p>2、网页中插入音乐外链播放器</p><p>网页云音乐由于版权问题无法生成外链播放器</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="1、给网站加上问答机器人"><a href="#1、给网站加上问答机器人" class="headerlink" title="1、给网站加上问答机器人"></a>1、给网站加上问答机器人</h3><p>第一种方法，由于不会前端方面的知识，就直接在socia引入url取个巧吧，等以后学会JavaScript之后再写个聊天界面接入网页中吧;</p><p>另外一种方法是新建一个page , hexo new page “robot”,在根目录下产生一个robot文件夹,删除里面的index.md,然后在根目录下的public文件夹里新建一个robot文件夹，将index.html文件拷贝进去（html+css+javascript),hexo g hexo d,这也是自定义网页的方法，不过hexo clean后，public文件夹就会被清理，所以要备份你自定义的index.html文件。</p><p>为了节省menu,我也把这个网页设成网址放在social里,不过每天回答的次数有限制。。。。</p><h3 id="2、网页中插入音乐外链播放器"><a href="#2、网页中插入音乐外链播放器" class="headerlink" title="2、网页中插入音乐外链播放器"></a>2、网页中插入音乐外链播放器</h3><p>网页云音乐由于版权问题无法生成外链播放器，故选取猫耳FM</p><p>外链HTML代码贴在想要放的位置，我把它放在尺寸自动播放代码里可以调</p><p>我把它插在侧边栏里，对应在layout/_macro/sidebar.swig文件里(我加了括号，不然在markdown总是显示为播放器，相当于插在当前页，下面出来的就是没加小括号的)</p><p>(<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="310" height="430" src="https://www.missevan.com/albumiframe/1861550?autoplay=false&playlist=true"></iframe>)</p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="310" height="430" src="https://www.missevan.com/albumiframe/1861550?autoplay=false&playlist=true"></iframe><h3 id="3、首页文章不全文显示，调成预览模式"><a href="#3、首页文章不全文显示，调成预览模式" class="headerlink" title="3、首页文章不全文显示，调成预览模式"></a>3、首页文章不全文显示，调成预览模式</h3>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;title: Hexo v3.8.0 +NexT.Mist v7.0.1  博客优化&lt;br&gt;author: Kun&lt;br&gt;date: 2019-03-05 20:48:58&lt;/p&gt;
-&lt;p&gt;tags: Hexo&lt;/p&gt;
-&lt;p&gt;1、给网站加上问答机器人&lt;/p&gt;
-&lt;p&gt;第一种方法
+        &lt;h3 id=&quot;1、给网站加上问答机器人&quot;&gt;&lt;a href=&quot;#1、给网站加上问答机器人&quot; class=&quot;headerlink&quot; title=&quot;1、给网站加上问答机器人&quot;&gt;&lt;/a&gt;1、给网站加上问答机器人&lt;/h3&gt;&lt;p&gt;第一种方法，由于不会前端方面的知识，就直接在socia引入u
       
     
     </summary>
     
     
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://yoursite.com/2019/03/04/demo/"/>
-    <id>http://yoursite.com/2019/03/04/demo/</id>
-    <published>2019-03-04T14:28:17.000Z</published>
-    <updated>2019-03-05T07:14:59.669Z</updated>
-    
-    <content type="html"><![CDATA[<h6 id="title-网站"><a href="#title-网站" class="headerlink" title="title:  网站"></a>title:  网站</h6><p>date: </p><p>tags: Django</p><p>网站大致由域名，空间服务器、DNS域名解析、网站程序和数据库等组成。</p><p>域名(Domain Name):由一串用点分隔符号组成，代表互联网上的某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位，标识IP。</p><p><a href="http://www.google.com" target="_blank" rel="noopener">www.google.com</a>  “google”是这个域名的主域名体，www是网络名，com是该域名的后缀。</p><p>客户端：浏览器</p><p>服务器：接收和处理用户的请求信息，能连在互联网且具有IP地址的计算机</p><p>IP地址：互联网协议地址，TCP/IP网络设备（计算机，服务器，打印机，路由器等）的数字标识符，互联网上的每个计算机都有一个IP地址，用于识别和通信。</p><p>IP地址有4组数字，以小数点分隔（192.168.0.1), 被称为逻辑地址，为了在网络中定位设备，通过TCP/IP协议将逻辑IP地址转换为物理地址（MAC地址）</p><p>TCP/IP:传输控制协议、互联网协议，广泛使用的通信协议</p><p>HTTP:超文本传输协议，是浏览器和服务器通过互联网进行通信的协议。</p><p>ISP:互联网服务提供商，主要工作是在DNS(域名系统)中查找当前域名对应的IP地址。</p><p><strong>网站运行原理</strong>：</p><p>1、浏览器中输入网站，如<a href="http://www.github.com" target="_blank" rel="noopener">www.github.com</a></p><p>2、浏览器解析网站地址中包含的信息，如HTTP协议和域名(github.com)</p><p>3、浏览器和ISP通信，在DNS查找<a href="http://www.github.com所对应的IP地址，然后将IP地址发送到浏览器的DNS服务，最后向www.github.com" target="_blank" rel="noopener">www.github.com所对应的IP地址，然后将IP地址发送到浏览器的DNS服务，最后向www.github.com</a> 的IP地址发送请求</p><p>4、浏览器从网站地址中获取IP地址和端口号（HTTP协议默认端口80，HTTPS默认为443），并打开TCP套接字连接，实现浏览器和Web服务器的连接</p><p>5、Web服务器接收请求后，根据请求信息查找该HTML页面，如果页面存在，则Web服务器将处理结果和页面返回到浏览器，若找不到页面，返回404错误，表示找不到相关页面。</p><p><strong>网站开发流程：</strong></p><p>需求分析—规划静态内容—设计阶段—程序开发阶段—测试和上线—维护推广</p><h4 id="Django"><a href="#Django" class="headerlink" title="Django"></a>Django</h4><p>相信Django(姜戈)这个词关注Python的小伙伴们都听过不止一次。</p><p>Django是Python开发网站的一个Web框架，是用来搭建网站的,是用python写成的。</p><p>Django采用MTV的框架模式，即模型(Model)、模板(Template)和视图(Views)</p><p>模型：数据存取层、处理和数据相关的所有事物</p><p>视图：表现层，例如如何在页面或其他类型文档中进行显示</p><p>模板：业务逻辑层</p><p>对象关系映射：Object Relational Mapping,  ORM  :通过定义映射类来构建数据模型，将模型与关系数据库连接起来</p><h5 id="安装："><a href="#安装：" class="headerlink" title="安装："></a><strong>安装：</strong></h5><p>开发环境：Windows（我的是win10）+Python3</p><p>首先要安装python3,相信看到这个文档的童鞋都安装好了，咱也不是啥都不会</p><p>Django安装：快捷键Windows+R(或者你用鼠标右击开始菜单)打开运行对话框，输入cmd并回车，进入命令提示符(终端)。</p><p>在终端中输入安装指令：pip install Django,回车后自行下载Django2.0</p><p>确认安装成功，打开Python的IDLE（交互解释器），输入校验代码：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> django</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>django.__version__</span><br><span class="line"><span class="string">'2.1.5'</span></span><br></pre></td></tr></table></figure><p>说明安装成功。</p><h5 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h5><p>一个项目理解为一个网站，在cmd窗口下输入项目创建指令创建MyDjango项目：</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">django-admin startproject MyDjango</span><br></pre></td></tr></table></figure><p>完成项目的创建后，接着创建项目应用(APP),相当于网站的功能，每个App代表网站的一个或多个网页。</p><p>在cmd窗口中输入 python manage.py startapp XXX完成App的创建。</p><p>首先进入盘（如F盘，项目所在盘），然后进入项目MyDjango</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">Users</span>\<span class="title">Administrator</span>&gt;<span class="title">f</span>:</span></span><br><span class="line"><span class="function"><span class="title">F</span>:\&gt;<span class="title">cd</span> <span class="title">MyDjango</span></span></span><br><span class="line"><span class="function"><span class="title">F</span>:\<span class="title">MyDjango</span>&gt;<span class="title">python</span> <span class="title">mange.py</span> <span class="title">startapp</span> <span class="title">index</span></span></span><br><span class="line"><span class="function"><span class="title">F</span>:\<span class="title">MyDjango</span>&gt;<span class="title">python</span> <span class="title">mange.py</span> <span class="title">startapp</span> <span class="title">user</span></span></span><br></pre></td></tr></table></figure><p>项目新建index和user两个文件夹，分别代表网站首页和用户中心。</p><h5 id="Django项目结构"><a href="#Django项目结构" class="headerlink" title="Django项目结构"></a>Django项目结构</h5><p>Manage.py  命令行工具，允许以多种方式和项目进行交互</p><p><strong> init </strong>.py :初始化文件，一般情况下无需修改</p><p>settings.py: 项目的配置文件</p><p>urls: 网站的地址信息</p><p>wsgi.py:  Python Web Server Gateway Interface, 即Python服务器网关接口，Python应用与Web服务器之间的接口，用于Django项目在服务器上的部署和上线，一般不需要修改</p><p>Migartions:用于数据库数据的迁移</p><p>admin.py :当前App的后台管理系统</p><p>apps.py : 当前APP的配置信息，自动生成，无需修改</p><p>models.py: 定义映射类关联数据库，实现数据持久化，即MTV里的模型（Model)</p><p>test.py : 自动化测试模块</p><p>Views.py: 逻辑处理模块，MTV中的视图（Views)</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h6 id=&quot;title-网站&quot;&gt;&lt;a href=&quot;#title-网站&quot; class=&quot;headerlink&quot; title=&quot;title:  网站&quot;&gt;&lt;/a&gt;title:  网站&lt;/h6&gt;&lt;p&gt;date: &lt;/p&gt;
-&lt;p&gt;tags: Django&lt;/p&gt;
-&lt;p&gt;网站大致由域名，
-      
-    
-    </summary>
-    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
   </entry>
   
