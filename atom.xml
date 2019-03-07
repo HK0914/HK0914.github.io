@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-07T08:40:17.977Z</updated>
+  <updated>2019-03-07T08:48:51.973Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://yoursite.com/2019/03/07/%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%8C%96-3/"/>
     <id>http://yoursite.com/2019/03/07/博客优化-3/</id>
     <published>2019-03-07T07:09:55.000Z</published>
-    <updated>2019-03-07T08:40:17.977Z</updated>
+    <updated>2019-03-07T08:48:51.973Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="设置头像边框为圆形框并实现鼠标放置头像上旋转的特效"><a href="#设置头像边框为圆形框并实现鼠标放置头像上旋转的特效" class="headerlink" title="设置头像边框为圆形框并实现鼠标放置头像上旋转的特效"></a>设置头像边框为圆形框并实现鼠标放置头像上旋转的特效</h4><p>新版的Next7，图片可以链接网址或者把图片放入 <code>themes/next/source/images</code> 下,修改 <code>avatar</code>。</p><p>无需修改<code>hemes/next/source/css/_common/components/sidebar/sidebar-author.syl</code>文件，只需要将themes/next/_config.yml修改如下即可：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># Sidebar Avatar</span><br><span class="line">avatar:</span><br><span class="line">  # In theme directory (source/images): /images/avatar.gif</span><br><span class="line">  # In site directory (source/uploads): /uploads/avatar.gif</span><br><span class="line">  # You can also use other linking images.</span><br><span class="line">  url: /images/avatar.gif</span><br><span class="line">  # If true, the avatar would be dispalyed in circle.</span><br><span class="line">  rounded: true</span><br><span class="line">  # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.</span><br><span class="line">  opacity: 1</span><br><span class="line">  # If true, the avatar would be rotated with the cursor.</span><br><span class="line">  rotated: true</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h4 id="设置头像边框为圆形框及实现鼠标放置头像上旋转的特效"><a href="#设置头像边框为圆形框及实现鼠标放置头像上旋转的特效" class="headerlink" title="设置头像边框为圆形框及实现鼠标放置头像上旋转的特效"></a>设置头像边框为圆形框及实现鼠标放置头像上旋转的特效</h4><p>新版的Next7，图片可以链接网址或者把图片放入 <code>themes/next/source/images</code> 下,修改 <code>avatar</code>。</p><p>无需修改<code>hemes/next/source/css/_common/components/sidebar/sidebar-author.syl</code>文件，只需要将themes/next/_config.yml修改如下即可：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># Sidebar Avatar</span><br><span class="line">avatar:</span><br><span class="line">  # In theme directory (source/images): /images/avatar.gif</span><br><span class="line">  # In site directory (source/uploads): /uploads/avatar.gif</span><br><span class="line">  # You can also use other linking images.</span><br><span class="line">  url: /images/avatar.gif</span><br><span class="line">  # If true, the avatar would be dispalyed in circle.</span><br><span class="line">  rounded: true</span><br><span class="line">  # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.</span><br><span class="line">  opacity: 1</span><br><span class="line">  # If true, the avatar would be rotated with the cursor.</span><br><span class="line">  rotated: true</span><br></pre></td></tr></table></figure><h4 id="设置网站的图标Favicon"><a href="#设置网站的图标Favicon" class="headerlink" title="设置网站的图标Favicon"></a>设置网站的图标Favicon</h4>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h4 id=&quot;设置头像边框为圆形框并实现鼠标放置头像上旋转的特效&quot;&gt;&lt;a href=&quot;#设置头像边框为圆形框并实现鼠标放置头像上旋转的特效&quot; class=&quot;headerlink&quot; title=&quot;设置头像边框为圆形框并实现鼠标放置头像上旋转的特效&quot;&gt;&lt;/a&gt;设置头像边框为圆形框并
+        &lt;h4 id=&quot;设置头像边框为圆形框及实现鼠标放置头像上旋转的特效&quot;&gt;&lt;a href=&quot;#设置头像边框为圆形框及实现鼠标放置头像上旋转的特效&quot; class=&quot;headerlink&quot; title=&quot;设置头像边框为圆形框及实现鼠标放置头像上旋转的特效&quot;&gt;&lt;/a&gt;设置头像边框为圆形框及
       
     
     </summary>
@@ -58,9 +58,9 @@
     </summary>
     
     
-      <category term="NexT" scheme="http://yoursite.com/tags/NexT/"/>
-    
       <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="NexT" scheme="http://yoursite.com/tags/NexT/"/>
     
   </entry>
   
