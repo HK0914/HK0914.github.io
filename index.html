@@ -528,7 +528,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">288</span>
+                <span title="本文字数">660</span>
               
 
               
@@ -565,8 +565,9 @@
         
           
             <p>
-              添加头像  opacity: hexo-config(‘avatar.opacity’) is a ‘unit’ ? hexo-config(‘avatar.opacity’) : 1;
-   -webkit-transition: -webkit-transform 1.0s ease-out;    -moz-transition: -moz-transform 1.0s ease-out; 
+              设置头像边框为圆形框并实现鼠标放置头像上旋转的特效新版的Next7，图片可以链接网址或者把图片放入 themes/next/source/images 下,修改 avatar。
+无需修改hemes/next/source/css/_common/components/sidebar/sidebar-author.syl文件，只需要将themes/next/_config.yml修改如下即可：
+# 
               ...
             </p>
           <!--noindex-->
@@ -1069,6 +1070,8 @@ $ npm i --save hexo-w
       <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="Kun">
             
               <p class="site-author-name" itemprop="name">Kun</p>
               <div class="site-description motion-element" itemprop="description"></div>
