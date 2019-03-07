@@ -127,7 +127,7 @@
 <meta property="og:site_name" content="Kun少侠">
 <meta property="og:description" content="首页文章间距过款打开\themes\next\source\css\_schemes\Mist\_posts-expanded.styl ，在最后一行添加 1234posts-expand .post &amp;#123;  margin-top: 30px;  margin-bottom: 30px;&amp;#125; 显示文章字数统计,阅读时长,总字数cd 到站点根目录下 1$ npm i --save h">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-07T04:58:10.243Z">
+<meta property="og:updated_time" content="2019-03-07T05:57:55.270Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客优化(2)">
 <meta name="twitter:description" content="首页文章间距过款打开\themes\next\source\css\_schemes\Mist\_posts-expanded.styl ，在最后一行添加 1234posts-expand .post &amp;#123;  margin-top: 30px;  margin-bottom: 30px;&amp;#125; 显示文章字数统计,阅读时长,总字数cd 到站点根目录下 1$ npm i --save h">
@@ -475,13 +475,9 @@
                 
               
 
-              <time title="创建时间：2019-03-07 10:50:43 / 修改时间：12:58:10" itemprop="dateCreated datePublished" datetime="2019-03-07T10:50:43+08:00">2019-03-07</time>
+              <time title="创建时间：2019-03-07 10:50:43" itemprop="dateCreated datePublished" datetime="2019-03-07T10:50:43+08:00">2019-03-07</time>
             
 
-            
-              
-
-              
             
           </span>
 
@@ -534,7 +530,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">493</span>
+                <span title="本文字数">2.7k</span>
               
 
               
@@ -548,7 +544,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">2 分钟</span>
               
             </div>
           
@@ -576,6 +572,11 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  symbols: true</span><br><span class="line">  time: true</span><br><span class="line">  total_symbols: true</span><br><span class="line">  total_time: false</span><br></pre></td></tr></table></figure>
 <p>打开 <code>themes/next/_config.yml</code> ，搜索关键字 <code>post_wordcount</code>：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">symbols_count_time:</span><br><span class="line">  separated_meta: true</span><br><span class="line">  item_text_post: true</span><br><span class="line">  item_text_total: true</span><br><span class="line">  awl: 4</span><br><span class="line">  wpm: 275</span><br></pre></td></tr></table></figure>
+<h3 id="27-实现点击出现桃心效果"><a href="#27-实现点击出现桃心效果" class="headerlink" title="27. 实现点击出现桃心效果"></a>27. 实现点击出现桃心效果</h3><p>cd 进 路径 <code>/themes/next/source/js/src</code> </p>
+<p>新建(touch love.js)并将以下代码复制进去并保存：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &apos;&apos;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e=0;e&lt;d.length;e++)d[e].alpha&lt;=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText=&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t=&quot;function&quot;==typeof e.onclick&amp;&amp;e.onclick;e.onclick=function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a=t.createElement(&quot;div&quot;);a.className=&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a=t.createElement(&quot;style&quot;);a.type=&quot;text/css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d=[];e.requestAnimationFrame=function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3/60)&#125;&#125;(),n()&#125;(window,document);</span><br></pre></td></tr></table></figure>
+<p>然后打开 <code>\themes\next\layout\_layout.swig</code> 文件,在末尾（在前面引用会出现找不到的bug）添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/love.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -809,7 +810,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#首页文章间距过款"><span class="nav-number">1.</span> <span class="nav-text">首页文章间距过款</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#显示文章字数统计-阅读时长-总字数"><span class="nav-number">2.</span> <span class="nav-text">显示文章字数统计,阅读时长,总字数</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#首页文章间距过款"><span class="nav-number">1.</span> <span class="nav-text">首页文章间距过款</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#显示文章字数统计-阅读时长-总字数"><span class="nav-number">2.</span> <span class="nav-text">显示文章字数统计,阅读时长,总字数</span></a></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#27-实现点击出现桃心效果"><span class="nav-number"></span> <span class="nav-text">27. 实现点击出现桃心效果</span></a></li></div>
             
 
           </div>
@@ -844,7 +845,7 @@
     
       <span class="post-meta-item-text">站点总字数：</span>
     
-    <span title="站点总字数">4k</span>
+    <span title="站点总字数">6k</span>
   
 
   
@@ -1397,6 +1398,11 @@
 
   
 
-
 <script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":100,"height":200,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.6,"opacityOnHover":0.3},"log":false});</script></body>
 </html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+
+
+
