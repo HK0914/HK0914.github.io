@@ -79,11 +79,6 @@
         };
       }
   
-      /**
-       * @name impush-client 
-       * @description 这个项目让我发家致富…
-       * @date 2016-12-1
-       */
   
       var _collection = [];
       var _count = 0;
@@ -116,15 +111,15 @@
           var data = res.list[j].arr;
           var liTmpl = "";
           for (var i = 0, len = data.link.length; i < len; i++) {
-            var minSrc = 'https://github.com/HK0914/blog_photos/tree/master/min_photos/' + data.link[i];
-            var src = 'https://github.com/HK0914/blog_photos/tree/master/photos/' + data.link[i];
+            var minSrc = 'https://raw.githubusercontent.com/HK0914/blog_photos/min_photos/' + data.link[i];
+            var src = 'https://raw.githubusercontent.com/HK0914/blog_photos/photos/' + data.link[i];
             var type = data.type[i];
             var target = src + (type === 'video' ? '.mp4' : '.jpg');
             src += '';
   
-            liTmpl += '<figure class="thumb" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">\
+            liTmpl += '<figure class="thumb" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">\
                   <a href="' + src + '" itemprop="contentUrl" data-size="1080x1080" data-type="' + type + '" data-target="' + src + '">\
-                    <img class="reward-img" data-type="' + type + '" data-src="' + src + '" src="./assets/empty.jpeg" itemprop="thumbnail" onload="lzld(this)">\
+                    <img class="reward-img" data-type="' + type + '" data-src="' + src + '" src="/photos/./assets/empty.jpeg" itemprop="thumbnail" onload="lzld(this)">\
                   </a>\
                   <figcaption style="display:none" itemprop="caption description">' + data.text[i] + '</figcaption>\
               </figure>';
@@ -133,7 +128,7 @@
           <ul class="img-box-ul">' + liTmpl + '</ul>\
           </section>';
         }
-        document.querySelector('.instagram').innerHTML = '<div class="photos" itemscope="" itemtype="http://schema.org/ImageGallery">' + ulTmpl + '</div>';
+        document.querySelector('.instagram').innerHTML = '<div class="photos" itemscope itemtype="http://schema.org/ImageGallery">' + ulTmpl + '</div>';
         createVideoIncon();
         _view2.default.init();
       };
