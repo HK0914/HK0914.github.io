@@ -14,48 +14,8 @@
   
 
 <html class="theme-next mist use-motion" lang="zh-CN">
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="pswp__bg"></div>
-    <div class="pswp__scroll-wrap">
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-        <div class="pswp__ui pswp__ui--hidden">
-            <div class="pswp__top-bar">
-                <div class="pswp__counter"></div>
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
+<script src="/js/src/photoswipe.min.js?v="></script>
+<script src="/js/src/photoswipe-ui-default.min.js?v="></script>
 
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
@@ -161,18 +121,20 @@
 
 
 
-  <meta name="description" content="12345678910111213141516171819202122&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;./ins.css&amp;quot;&amp;gt; &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;./photoswipe.css&amp;quot;&amp;gt; &amp;lt;link rel=&amp;quot;style">
+  <meta name="description" content="Photos    图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($sc">
 <meta property="og:type" content="website">
 <meta property="og:title" content="我的相册">
 <meta property="og:url" content="http://yoursite.com/photos/index.html">
 <meta property="og:site_name" content="Kun少侠">
-<meta property="og:description" content="12345678910111213141516171819202122&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;./ins.css&amp;quot;&amp;gt; &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;./photoswipe.css&amp;quot;&amp;gt; &amp;lt;link rel=&amp;quot;style">
+<meta property="og:description" content="Photos    图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($sc">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-11T03:25:55.484Z">
+<meta property="og:updated_time" content="2019-03-11T03:45:40.359Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的相册">
-<meta name="twitter:description" content="12345678910111213141516171819202122&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;./ins.css&amp;quot;&amp;gt; &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; href=&amp;quot;./photoswipe.css&amp;quot;&amp;gt; &amp;lt;link rel=&amp;quot;style">
+<meta name="twitter:description" content="Photos    图片正在加载中…     (function() {     var loadScript = function(path) {       var $script = document.createElement(&apos;script&apos;)       document.getElementsByTagName(&apos;body&apos;)[0].appendChild($sc">
 
+
+  
 
 
   <link rel="alternate" href="/atom.xml" title="Kun少侠" type="application/atom+xml">
@@ -492,7 +454,23 @@
       <div class="post-body">
         
         
-          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;./ins.css&quot;&gt;</span><br><span class="line"> &lt;link rel=&quot;stylesheet&quot; href=&quot;./photoswipe.css&quot;&gt; </span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;./default-skin/default-skin.css&quot;&gt; </span><br><span class="line">&lt;div class=&quot;photos-btn-wrap&quot;&gt;</span><br><span class="line">	&lt;a class=&quot;photos-btn active&quot; href=&quot;javascript:void(0)&quot;&gt;Photos&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;div class=&quot;instagram itemscope&quot;&gt;</span><br><span class="line">	&lt;a href=&quot;https://HK0914.github.io&quot; target=&quot;_blank&quot; class=&quot;open-ins&quot;&gt;图片正在加载中…&lt;/a&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"> </span><br><span class="line">&lt;script&gt;</span><br><span class="line">  (function() &#123;</span><br><span class="line">    var loadScript = function(path) &#123;</span><br><span class="line">      var $script = document.createElement(&apos;script&apos;)</span><br><span class="line">      document.getElementsByTagName(&apos;body&apos;)[0].appendChild($script)</span><br><span class="line">      $script.setAttribute(&apos;src&apos;, path)</span><br><span class="line">    &#125;</span><br><span class="line">    setTimeout(function() &#123;</span><br><span class="line">        loadScript(&apos;./ins.js&apos;)</span><br><span class="line">    &#125;, 0)</span><br><span class="line">  &#125;)()</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+          <p><link rel="stylesheet" href="../lib/blog_photos/ins.css"><br> <link rel="stylesheet" href="../lib/blog_photos/photoswipe.css"> </p>
+<link rel="stylesheet" href="../lib/blog_photos/default-skin/default-skin.css"> 
+
+<div class="photos-btn-wrap"><br>    <a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="noopener">Photos</a><br></div><br><div class="instagram itemscope"><br>    <a href="https://HK0914.github.io" target="_blank" class="open-ins">图片正在加载中…</a><br></div>
+
+<script>
+  (function() {
+    var loadScript = function(path) {
+      var $script = document.createElement('script')
+      document.getElementsByTagName('body')[0].appendChild($script)
+      $script.setAttribute('src', path)
+    }
+    setTimeout(function() {
+        loadScript('./ins.js')
+    }, 0)
+  })()
+</script>
         
       </div>
       
@@ -762,6 +740,48 @@
         
       </div>
     
+
+    
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     
 
