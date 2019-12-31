@@ -1,76 +1,179 @@
-extends includes/layout.pug
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.9.0"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>Ubuntu + Django2.1.2 +Python3 | Kun少侠</title><meta name="description" content="Ubuntu + Django2.1.2 +Python3"><meta name="keywords" content="Django"><meta name="author" content="Kun"><meta name="copyright" content="Kun"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="canonical" href="http://yoursite.com/post/eeec02ce"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Ubuntu + Django2.1.2 +Python3"><meta name="twitter:description" content="Ubuntu + Django2.1.2 +Python3"><meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1568199484409&amp;di=eccc641c2d21a3dad67ddeae7df716ce&amp;imgtype=0&amp;src=http%3A%2F%2Fn.sinaimg.cn%2Ftranslate%2Fw1280h720%2F20171204%2Fqa_i-fypikwt6342432.jpg"><meta property="og:type" content="article"><meta property="og:title" content="Ubuntu + Django2.1.2 +Python3"><meta property="og:url" content="http://yoursite.com/post/eeec02ce"><meta property="og:site_name" content="Kun少侠"><meta property="og:description" content="Ubuntu + Django2.1.2 +Python3"><meta property="og:image" content="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1568199484409&amp;di=eccc641c2d21a3dad67ddeae7df716ce&amp;imgtype=0&amp;src=http%3A%2F%2Fn.sinaimg.cn%2Ftranslate%2Fw1280h720%2F20171204%2Fqa_i-fypikwt6342432.jpg"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="prev" title="Java自学笔记" href="http://yoursite.com/post/1770f1b2.html"><link rel="next" title="博客搭建相册" href="http://yoursite.com/post/eb6ee242.html"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"cookieDomain":"https://xxx/","msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简"},
+  highlight_copy: 'true',
+  highlight_lang: 'true',
+  highlight_shrink: 'false',
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  bookmark: {
+    title: '添加书签',
+    message_prev: '按',
+    message_next: '键将本页加入书签'
+  },
+  runtime_unit: '天'
 
-block top_img
-  - var top_img =  page.top_img || page.cover || theme.post_meta.top_img || theme.post_img || theme.top_img || config.top_img
-  - var bg_img = top_img !== true ? `background-image: url(${top_img})` : ''
-  div#top-container(style=bg_img)
-    include ./includes/header.pug
-    #post-info
-      #post-title
-          .posttitle=page.title || _p('no_title')
-      #post-meta
-        if (theme.post_meta.date_type)
-          if (theme.post_meta.date_type === 'both')
-            time.post-meta__date
-              i.fa.fa-calendar(aria-hidden="true")
-              =' '+_p('post.created')+' '+date(page.date, config.date_format)
-              span.post-meta__separator |
-              i.fa.fa-history(aria-hidden="true")
-              =' '+_p('post.updated')+' '+date(page.updated, config.date_format)
-          else
-            - var date_type = theme.post_meta.date_type === 'updated' ? 'updated' : 'date'
-            time.post-meta__date #[i.fa.fa-calendar(aria-hidden="true")] #[=date(page[date_type], config.date_format)]
-                  
-        if (theme.post_meta.categories && page.categories.data.length > 0)
-          if (theme.post_meta.date_type)
-            span.post-meta__separator.mobile_hidden |
-          span.mobile_hidden
-            each item, index in page.categories.data
-              i.fa.fa-inbox.post-meta__icon(aria-hidden="true")
-              a(href=url_for(item.path)).post-meta__categories #[=item.name]
-              if (index < page.categories.data.length - 1)
-                i.fa.fa-angle-right(aria-hidden="true")
-        if (theme.wordcount && theme.wordcount.enable)
-          .post-meta-wordcount
-            span= _p('post.wordcount') + ': '
-            span.word-count= wordcount(page.content)
-            span.post-meta__separator |
-            span= _p('post.min2read', min2read(page.content, {cn: 350, en: 160}))
-            if theme.busuanzi.page_pv
-              span.post-meta__separator |
-              span= _p('post.page_pv') + ': '
-              span#busuanzi_value_page_pv
-
-
-block content
-  article#post(class="")
-    #post-content.article-container!= page.content
-  if (theme.post_copyright && theme.post_copyright.enable && page.copyright != false)
-    .post-copyright
-      .post-copyright__author
-        span.post-copyright-meta= _p('post.copyright.author') + ": "
-        span.post-copyright-info
-          a(href=`mailto:${config.email}`) #[=config.author]
-      .post-copyright__type
-        span.post-copyright-meta= _p('post.copyright.link') + ": "
-        span.post-copyright-info
-          a(href=url_for(page.permalink)) #[=page.permalink]
-      .post-copyright__notice
-        span.post-copyright-meta= _p('post.copyright.copyright_notice') + ": "
-        span.post-copyright-info!= _p('post.copyright.copyright_content', theme.post_copyright.license_url, theme.post_copyright.license, config.url, config.title)
   
-  .tag_share
-    if (theme.post_meta.tags)
-      .post-meta__tag-list
-        each item, index in page.tags.data
-          a(href=url_for(item.path)).post-meta__tags #[=item.name]    
-    include includes/share/index.pug
-        
-  if theme.reward.enable
-    include includes/reward.pug
-  include includes/pagination.pug
-  
-  if theme.related_post && theme.related_post.enable
-    != related_posts(page,site.posts)
-  if page.comments !== false
-    include includes/comments/index.pug
+}</script></head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div class="auto_open" id="sidebar"><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar">     </div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Ubuntu-Django2-1-2-Python3"><span class="toc-number">1.</span> <span class="toc-text">Ubuntu + Django2.1.2 +Python3</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1、简单博客系统"><span class="toc-number">1.1.</span> <span class="toc-text">1、简单博客系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-Django-入门"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.1 Django 入门</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-1-Django"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">1.1.1 Django</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-2-安装Django-Python3"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">1.1.2 安装Django(Python3)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-3-创建项目（project"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">1.1.3 创建项目（project)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-4-创建应用-application"><span class="toc-number">1.1.1.4.</span> <span class="toc-text">1.1.4 创建应用(application)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-manage-py"><span class="toc-number">1.1.1.4.1.</span> <span class="toc-text">1. manage.py</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-mysite"><span class="toc-number">1.1.1.4.2.</span> <span class="toc-text">2. mysite</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-blog"><span class="toc-number">1.1.1.4.3.</span> <span class="toc-text">3. blog</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4-db-sqlite3"><span class="toc-number">1.1.1.4.4.</span> <span class="toc-text">4. db.sqlite3</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-5-网站的配置"><span class="toc-number">1.1.1.5.</span> <span class="toc-text">1.1.5 网站的配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-6-知识点"><span class="toc-number">1.1.1.6.</span> <span class="toc-text">1.1.6 知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-开发模式"><span class="toc-number">1.1.1.6.1.</span> <span class="toc-text">1. 开发模式</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-项目和应用"><span class="toc-number">1.1.1.6.2.</span> <span class="toc-text">2. 项目和应用</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-编写博客的数据模型类"><span class="toc-number">1.1.2.</span> <span class="toc-text">1.2 编写博客的数据模型类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-1-数据模型类"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">1.2.1 数据模型类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-2-发布博客文章"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">1.2.2 发布博客文章</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-3-知识点"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">1.2.3 知识点</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-HTTP"><span class="toc-number">1.1.2.3.1.</span> <span class="toc-text">1. HTTP</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-URL"><span class="toc-number">1.1.2.3.2.</span> <span class="toc-text">2. URL</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-模型：-ORM"><span class="toc-number">1.1.2.3.3.</span> <span class="toc-text">3. 模型： ORM</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1568199484409&amp;di=eccc641c2d21a3dad67ddeae7df716ce&amp;imgtype=0&amp;src=http%3A%2F%2Fn.sinaimg.cn%2Ftranslate%2Fw1280h720%2F20171204%2Fqa_i-fypikwt6342432.jpg)"><div id="page-header"><span class="pull-left"> <a class="blog_title" id="site-name" href="/">Kun少侠</a></span><div class="open toggle-menu pull-right"><div class="menu-icon-first"></div><div class="menu-icon-second"></div><div class="menu-icon-third"></div></div><div class="menu_mask"></div><span class="pull-right menus"><div class="mobile_author_icon"><img class="lozad avatar_img" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/Photo/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'"></div><div class="mobile_post_data"><div class="mobile_data_item text-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">8</div></a></div></div><div class="mobile_data_item text-center">      <div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">5</div></a></div></div><div class="mobile_data_item text-center">     <div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">2</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/gallery/ "><i class="fa-fw fa fa-camera"></i><span> 相册</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fa fa-slideshare"></i><span> ai问答</span></a></div><script>document.body.addEventListener('touchstart', function(){ });</script></div></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search fa-fw"></i><span> 搜索</span></a></span></div><div id="post-info"><div id="post-title"><div class="posttitle">Ubuntu + Django2.1.2 +Python3</div></div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 发表于 2019-08-07<span class="post-meta__separator">|</span><i class="fa fa-history" aria-hidden="true"></i> 更新于 2019-09-11</time><span class="post-meta__separator mobile_hidden">|</span><span class="mobile_hidden"><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Python3-Django/">Python3 Django</a></span><div class="post-meta-wordcount"><span>字数总计: </span><span class="word-count">3.6k</span><span class="post-meta__separator">|</span><span>阅读时长: 12 分钟</span><span class="post-meta__separator">|</span><span>阅读量: </span><span id="busuanzi_value_page_pv"></span></div></div></div></div><div class="layout layout_post" id="content-inner">   <article id="post"><div class="article-container" id="post-content"><h1 id="Ubuntu-Django2-1-2-Python3"><a href="#Ubuntu-Django2-1-2-Python3" class="headerlink" title="Ubuntu + Django2.1.2 +Python3"></a>Ubuntu + Django2.1.2 +Python3</h1><h2 id="1、简单博客系统"><a href="#1、简单博客系统" class="headerlink" title="1、简单博客系统"></a>1、简单博客系统</h2><h3 id="1-1-Django-入门"><a href="#1-1-Django-入门" class="headerlink" title="1.1 Django 入门"></a>1.1 Django 入门</h3><h4 id="1-1-1-Django"><a href="#1-1-1-Django" class="headerlink" title="1.1.1 Django"></a>1.1.1 Django</h4><p>django -网站的开发框架</p>
+<h4 id="1-1-2-安装Django-Python3"><a href="#1-1-2-安装Django-Python3" class="headerlink" title="1.1.2 安装Django(Python3)"></a>1.1.2 安装Django(Python3)</h4><p>打开终端 <code>$ pip3 install Django == 2.1.2</code></p>
+<h4 id="1-1-3-创建项目（project"><a href="#1-1-3-创建项目（project" class="headerlink" title="1.1.3 创建项目（project)"></a>1.1.3 创建项目（project)</h4><p>“项目”，可以理解为一个网站</p>
+<p>首先，创建一个目录mysite（文件夹），将项目创建在这个mysite里</p>
+<p>打开终端</p>
+<p>$ sudo install python-django-common</p>
+<p>$ sudo apt-get install python - django</p>
+<p>然后在这个mysite目录下（空白），右键，选择Open in Terminal</p>
+<p><code>~/mysite$ django-admin startproject mysite</code> —-创建一个django项目，多了一个mysite子目录，mysite是这个项目名称，这时已经有了一个网站的基本框架了。</p>
+<p>创建项目时用到的 django-admin.py，它是Django 的任务管理命令行工具</p>
+<p>在有manage.py这个文件的目录下打开终端<code>$ python manage.py runserver</code></p>
+<p>若一切正常，可以看到提示信息：</p>
+<p>Starting development server at <a href="http://127.0.0.1:8000/" target="_blank" rel="noopener">http://127.0.0.1:8000/</a> ——启动服务 Quit the server with CONTROL-C. ——control+c 结束当前服务</p>
+<p>打开浏览器，输入<a href="http://12.0.xn--1:8000http-xl8ts00z//localhost:8000" target="_blank" rel="noopener">http://12.0.1:8000或者http://localhost:8000</a> ,会看到Django网页</p>
+<h4 id="1-1-4-创建应用-application"><a href="#1-1-4-创建应用-application" class="headerlink" title="1.1.4 创建应用(application)"></a>1.1.4 创建应用(application)</h4><p>网站的具体功能</p>
+<p>进入到刚才创建的项目目录中，即manage.py文件所在的目录</p>
+<p><code>~/mysite$ python manage.py startapp blog</code> ——在项目mysite中新建了一个blog应用。</p>
+<p>对项目结构各个部分简介</p>
+<h5 id="1-manage-py"><a href="#1-manage-py" class="headerlink" title="1. manage.py"></a>1. manage.py</h5><p>在创建一个Django项目后，manage.py 被自动生成在项目的根目录中，它是对django-admin.py的简单封装，同样能够实现命令行操作，不要修改和删除它。</p>
+<h5 id="2-mysite"><a href="#2-mysite" class="headerlink" title="2. mysite"></a>2. mysite</h5><p>所建项目的管理功能目录，它里面的文件常用于整个项目进行参数配置</p>
+<p><code>settings.py</code> : 包含项目的初始化设置，可以针对整个项目进行有关参数配置，比如配置数据库、添加应用等。</p>
+<p><code>urls.py</code>: URL配置表文件，主要将URL映射到应用程序上。当用户请求某个URL时，Django项目会根据这个文件中的映射关系指向某个目标对象（某个应用的urls.py文件或某个具体的视图函数）。这个文件也被称为URLconf.</p>
+<p><code>wsgi.py</code> : （Web Server Gateway Interface),是Python所选择的服务器和应用标准。</p>
+<p><code>__pychache__</code>: 执行python manage.py runserver命令后出现，时一个编译后的文件夹，里面文件都是以.pyc结尾的文件。</p>
+<h5 id="3-blog"><a href="#3-blog" class="headerlink" title="3. blog"></a>3. blog</h5><p>项目中创建的应用之一，每创建一个新的应用，Django就会在项目根目录中( ./)中创建一个子目录，目录中会有一些默认的文件。</p>
+<p><code>admin.py</code> : 可以自定义Django管理工具。</p>
+<p><code>apps.py</code> : 包含对应用的配置</p>
+<p><code>migrations</code>: 这是一个目录，用于存储应用的数据库表结构的指令，通过这些指令可以修改和创建数据库，从而在models.py模型类和数据库表之间的迁移。</p>
+<p><code>models.py</code> : 应用的数据模型，每个Django应用都应当有一个models.py文件，可以为空。</p>
+<p><code>tests.py</code>：在这个文件中编写测试文档来测试所建立的应用。</p>
+<p><code>views.py</code>: 用户保存响应各种请求的函数和类。 如果编写的是函数，则称之为基于函数的视图；如果编写的是类，则称之为基于类的视图。保存函数或者类的视图文件。</p>
+<h5 id="4-db-sqlite3"><a href="#4-db-sqlite3" class="headerlink" title="4. db.sqlite3"></a>4. db.sqlite3</h5><p>默认的数据库SQLite</p>
+<h4 id="1-1-5-网站的配置"><a href="#1-1-5-网站的配置" class="headerlink" title="1.1.5 网站的配置"></a>1.1.5 网站的配置</h4><p>将应用注册到项目中</p>
+<p>在Django项目中，主管信息注册（对本项目进行各种信息声明）的文件时./mysite/settings.py。</p>
+<p><strong>DEBUG</strong>： True or False, 开发过程中，设置成True,在测试功能时，Django能够显示详细的报错信息——“开发模式”。如果将项目部署到真正要对外发布的服务器上——“生产环境”，必须将其值修改为False,从而避免暴露项目的内部信息。</p>
+<p><strong>ALLOWED_HOSTS</strong>: 在DEBUG设置为True时，其值可以为空。当部署到生产环境中时，要把主域名填写到这里，才能通过域名访问到本网站。</p>
+<p><strong>INSTALLED_APPS</strong>： 所有的应用写到这里才能生效。</p>
+<p>INSTALLED_APPS = [  ‘django.contrib.admin’, # 针对项目后台管理的应用。  ‘django.contrib.auth’,  ‘django.contrib.contenttypes’,  ‘django.contrib.sessions’,  ‘django.contrib.messages’,<br>​ ‘django.contrib.staticfiles’, ​ ‘blog’, #新增加的，所建立项目的名称，其他项Django默认具有的应用。 ]</p>
+<p><strong>DATABASES</strong>: 配置数据库，默认配置SQLite,小巧灵活，Python标准库所支持。</p>
+<p><strong>LANGUAGE_CODE</strong>:设置项目的语言，汉语，设置为 LANGUAGE_CODE = ‘zh-hans’</p>
+<p>TIME_ZONE: 设置时区，东八区， TIME_ZONE = ‘Asia/Shanghai’</p>
+<h4 id="1-1-6-知识点"><a href="#1-1-6-知识点" class="headerlink" title="1.1.6 知识点"></a>1.1.6 知识点</h4><h5 id="1-开发模式"><a href="#1-开发模式" class="headerlink" title="1. 开发模式"></a>1. 开发模式</h5><p>是相对于“生产模式”而言的，即系统尚处于开发阶段，还没正式对外部客户提供服务，在Django开发模式中，不需要配置Apache或者Nginx等服务器，也能够运行网站，这是因为Django本身就提供了简单的Web服务器功能，但是这仅限于开发过程，当网站被正式部署后，即转换为“生产模式”时，就需要对部分配置进行修改。</p>
+<p>在开发模式中，Django会自动检测到修改代码并重新加载，不需要每次修改代码后重新启动Web服务器。只有在新增加文件后，才需要重启Django服务。</p>
+<p>运行Django服务的指令是： <code>python manage.py runserver</code></p>
+<h5 id="2-项目和应用"><a href="#2-项目和应用" class="headerlink" title="2. 项目和应用"></a>2. 项目和应用</h5><p>Django安装好之后，就有了django-admin这个默认命令，可以用<code>django-admin starproject projectname</code>命令创建一个Django项目。</p>
+<p>项目是由若干个“应用”(app)组成的，实现具体的功能。创建应用可以用 <code>python manage.py startapp appname</code>命令。也可以使用 <code>django-admin startapp appname</code>命令。</p>
+<p>创建项目和应用后，会生成一些默认的文件，要么是一些默认的配置，要么是一些空文件为了占据位置。</p>
+<p>每个应用都要在项目的settings.py文件的INSTALLED_APPS中进行声明，告诉Django这个应用是本项目的一部分。</p>
+<h3 id="1-2-编写博客的数据模型类"><a href="#1-2-编写博客的数据模型类" class="headerlink" title="1.2 编写博客的数据模型类"></a>1.2 编写博客的数据模型类</h3><p>设计数据库和表结构是做网站的基础。在Django中，不需要通过SQL语句直接跟数据库打交道，而是完全用    python的方式创建数据库，之后交给Django完成数据库的操作。</p>
+<h4 id="1-2-1-数据模型类"><a href="#1-2-1-数据模型类" class="headerlink" title="1.2.1 数据模型类"></a>1.2.1 数据模型类</h4><p>利用Django开发网站系统，一般情况下，要先编写数据模型，就是在./blog/models.py中写一个类，这个类与数据库中的数据表具有对应关系。</p>
+<p>在./blog/models.py中编写博客的数据模型类 Blog, 它本质上是一个继承了django.db.models.Models的类。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">from django.db import models</span><br><span class="line">from django.utils import timezone</span><br><span class="line">from django.contrib.auth.models import User</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class BlogArticles(models.Model):</span><br><span class="line">    title = models.CharField(max_length=300)  #1</span><br><span class="line">    author = models.ForeignKey(User,</span><br><span class="line">related_name=&quot;blog_posts&quot;,on_delete=models.CASCADE,) #2</span><br><span class="line">    body = models.TextField()</span><br><span class="line">    publish = models.DateTimeField(default=timezone.now)</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">    class Meta: #3</span><br><span class="line">        ordering = (&quot;-publish&quot;,)</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line">    def __str__(self):</span><br><span class="line">        return self.title</span><br></pre></td></tr></table></figure>
+<p>这个BlogArticles类中定义了一些属性，每个属性对应着将来数据库表中的一个字段。，以后将属性称之为字段。</p>
+<p>#1 字段title的属性为CharFiled()类型，参数说字 段的最大数量.</p>
+<p>#2 通过字段author规定了博客和用户之间的关系——一个用户对应多篇文章。ForeignKey() 就反映了这种“一对多”关系。类User就是BlogArticles的对应对象，related_name=”blog_posts”的作用是允许通过类User反向查询到BlogArticles.</p>
+<p>#3 通过 ordering = (“-publish”,)，规定了BlogArticles实例对象的显示顺序，即按照publish字段值的倒序显示。</p>
+<p>BlogArticles 类的数据模型编写好了，将来数据库表的基本结构就是按照上述各字段及其属性而定的。</p>
+<p><strong>接下来根据数据模型建立数据库表：</strong></p>
+<p>在/mysite/manage.py 位置执行 <code>~/mysite$ python manage.py makemigrations</code>,会有Migrations for blog : …的提示信息，意思就是在blog/migrations目录中创建了一个BlogArticles模型，打开这个001_initial.py文件看一下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"># Generated by Django 2.1.2 on 2018-10-13 12:21</span><br><span class="line"></span><br><span class="line">from django.conf import settings</span><br><span class="line">from django.db import migrations, models</span><br><span class="line">import django.db.models.deletion</span><br><span class="line">import django.utils.timezone</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class Migration(migrations.Migration):</span><br><span class="line"></span><br><span class="line">    initial = True</span><br><span class="line"></span><br><span class="line">    dependencies = [</span><br><span class="line">        migrations.swappable_dependency(settings.AUTH_USER_MODEL),</span><br><span class="line">    ]</span><br><span class="line"></span><br><span class="line">    operations = [</span><br><span class="line">        migrations.CreateModel(</span><br><span class="line">            name=&apos;BlogArticles&apos;,</span><br><span class="line">            fields=[</span><br><span class="line">                (&apos;id&apos;, models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name=&apos;ID&apos;)),</span><br><span class="line">                (&apos;title&apos;, models.CharField(max_length=300)),</span><br><span class="line">                (&apos;body&apos;, models.TextField()),</span><br><span class="line">                (&apos;publish&apos;, models.DateTimeField(default=django.utils.timezone.now)),</span><br><span class="line">                (&apos;author&apos;, models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name=&apos;blog_posts&apos;, to=settings.AUTH_USER_MODEL)),</span><br><span class="line">            ],</span><br><span class="line">            options=&#123;</span><br><span class="line">                &apos;ordering&apos;: (&apos;-publish&apos;,),</span><br><span class="line">            &#125;,</span><br><span class="line">        ),</span><br><span class="line">    ]</span><br></pre></td></tr></table></figure>
+<p>这个文件是执行<code>python manage.py makemigrations</code>命令后，django自动生成的。这个文件的功能是创建一个名称为BlogArticles的数据库表。这个表的名称由两部分组成，第一部分是blog本应用的名称，第二部分是blogaricles(都小写)是在models.py中创建的数据模型类的名称，中间用单下划线连接。</p>
+<p>创建了一个能够建立数据库表的文件，就可以真正创建数据库了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/mysite$ python manage.py migrate</span><br></pre></td></tr></table></figure>
+<p>本项目使用SQLite数据库，并且在settings.py中规定了数据库文件存放在项目根目录中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">DATABASES = &#123;</span><br><span class="line">    &apos;default&apos;: &#123;</span><br><span class="line">        &apos;ENGINE&apos;: &apos;django.db.backends.sqlite3&apos;,</span><br><span class="line">        &apos;NAME&apos;: os.path.join(BASE_DIR, &apos;db.sqlite3&apos;),</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>对于db.sqlite3这个文件，可以在FireFox浏览器中安装SQLite Manager 插件来查看。 由于我的火狐浏览器插件不兼容，两种办法：1、直接在Ubuntu Software 搜索 sqlite ,安装DB Browser for SQLite； 2是通过打开终端输入命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install sqlite3</span><br><span class="line">sqlite -version</span><br><span class="line">sudo apt-get install sqlitebrowser</span><br></pre></td></tr></table></figure>
+<p>综上，博客的数据库就建立好了。</p>
+<h4 id="1-2-2-发布博客文章"><a href="#1-2-2-发布博客文章" class="headerlink" title="1.2.2 发布博客文章"></a>1.2.2 发布博客文章</h4><p>先用最简单的方式实现博客文章的发布,使用Django默认的管理功能就可以发布文章。要使用此功能，必须先创建超级管理员。要牢记所使用的用户名和密码。密码设置要有一定的复杂度，我的是英文字母加数字，至少8位。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mysite$ python manage.py createsuperuser</span><br><span class="line">Username(leave blank to use &apos;qiwsir&apos;): kun</span><br><span class="line">Email address: hk19930914@163.com</span><br><span class="line">Password:*********</span><br><span class="line">Password(again):*********</span><br><span class="line">Superuser created successfull</span><br></pre></td></tr></table></figure>
+<p>运行服务器 <code>mysite$ python manage.py runserver</code></p>
+<p>浏览器地址栏输入 <a href="http://127.0.0.1:8000/admin/%E6%88%96%E8%80%85http://localhost:8000/admin/" target="_blank" rel="noopener">http://127.0.0.1:8000/admin/或者http://localhost:8000/admin/</a>, 然后输入刚才创建超级管理员的用户名和密码，就可以进入Django administration页面。 用户(Users)和组(Groups)是Django在用户管理应用中默认的，单击User会看到当前项目仅有的一个用户kun，当然也可以增加用户。</p>
+<p>打开./blog/admin.py文件，用编辑工具打开，输入以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from django.contrib import admin</span><br><span class="line">from .models import BlogArticles  #1  将BlogArticles类引入当前环境</span><br><span class="line"></span><br><span class="line">admin.site.register(BlogArticles) #2  将该类注册到admin中</span><br></pre></td></tr></table></figure>
+<p>刷新浏览器页面，看到新注册的BLOG。</p>
+<p>单击Blog articless 右侧的Add按钮就可以添加博客文章。内容填写之后，点击保存，该博客文章被保存到数据库中，可以使用DB Browser for SQLite查看数据库。</p>
+<p>在./blog/models.py中使用了django.utils.timezone,所以要安装一个pytz模块，用它来提供时区。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo pip3 install pytz</span><br></pre></td></tr></table></figure>
+<p>安装完毕，重启服务。</p>
+<p>在文章列表页，可以看到所有已经发布的文章标题。由于显示的列表信息太单一，为了使列表页的信息更加丰富，继续用编辑./blog/admin.py 文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">from django.contrib import admin</span><br><span class="line">from .models import BlogArticles</span><br><span class="line"></span><br><span class="line">class BlogArticlesAdmin(admin.ModelAdmin):</span><br><span class="line">       list_display = (&quot;title&quot;,  &quot;author&quot;,  &quot;publish&quot;)</span><br><span class="line">       list_filter = (&quot;publish&quot;,  &quot;author&quot;)</span><br><span class="line">       search_fields = (&apos;title&apos;,  &quot;body&quot;)</span><br><span class="line">       raw_id_fields = (&quot;author&quot;,)</span><br><span class="line">       date_hierarchy = &quot;publish&quot;</span><br><span class="line">       ordering = [&apos;publish&apos;,  &apos;author&apos;]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">admin.site.register(BlogArticles, BlogArticlesAdmin)</span><br></pre></td></tr></table></figure>
+<p>保存，刷新浏览器页面，即可看到效果。</p>
+<h4 id="1-2-3-知识点"><a href="#1-2-3-知识点" class="headerlink" title="1.2.3 知识点"></a>1.2.3 知识点</h4><h5 id="1-HTTP"><a href="#1-HTTP" class="headerlink" title="1. HTTP"></a>1. HTTP</h5><p>Hyper Text Transfer Protocol( 超文本传输协议 )，是客户端( 浏览器、网页爬虫程序 )和服务器端( 网站 )请求和应答的标准(TCP)，封装了Web服务的整个过程，默认端口80。</p>
+<ul>
+<li>请求 (request): 客户端到服务器端</li>
+<li>响应 (response): 服务器端到客户端。状态信息（HTTP/1.1 200) 和内容信息。</li>
+</ul>
+<p>HTTP/1.1 协议共定义了8种请求方式：OPTIONS、HEAD、GET、POST、 PUT、DELETE、TRACE 和 CONNECT.</p>
+<p>本项目中主要使用GET和POST请求</p>
+<ul>
+<li>GET：向指定服务器发出请求，主要用于读取信息并显示</li>
+<li>POST： 向指定服务器提交数据，请求服务器进行处理（例如提交表单或者上传文件）</li>
+</ul>
+<p>HTTPS — Hyper Text Transfer Protocol Secure,默认端口443，安全性更高，HTTP以明文方式封装信息，HTTPS以加密方式传送信息。</p>
+<h5 id="2-URL"><a href="#2-URL" class="headerlink" title="2. URL"></a>2. URL</h5><p>Uniform/Universal Resource Locator 统一资源定位符，俗称网址。</p>
+<p>URL标准格式：协议类型://服务器地址(必要时需加上端口号)/路径/文件名</p>
+<ul>
+<li>协议类型：HTTP/HTTPSu</li>
+<li>服务器地址： 通常是域名，比如baidu.com,也可以是IP地址，如果默认是80端口，可以不写，否则需要写上端口。</li>
+<li>路径：以”/“区别目录，对于GET请求方式，可以用“？”发起参数，每个参数以“&amp;”隔开，再以“=”分开参数名称和值。</li>
+<li>文件名：有必要可写</li>
+</ul>
+<h5 id="3-模型：-ORM"><a href="#3-模型：-ORM" class="headerlink" title="3. 模型： ORM"></a>3. 模型： ORM</h5><p>动态网站，大多数是通过数据库实现对数据的保存和读取，所以数据库是网站最基本最底层的组成部分。</p>
+<p>Django不需要开发者使用SQL语句实现程序和数据库的交互，而是通过ORM，即Object-Relational Mapping（对象关系映射）。</p>
+<p>ORM的作用是在关系型数据库和业务实体对象之间进行映射，，只需简单地操作对象的属性和方法。</p>
+<p>Django的数据模型层大量使用ORM,表现方式就是编写数据模型类，这些类可以写到任何文件中，通常写在每个应用的models.py文件中，每个数据模型类都是django.db.models.Model的子类。应用的名称（小写字母）和数据模型类的名称（小写字母）共同组成一个数据库表的名称（”appname”_”modelname”,例如blog_blogarticles).</p>
+<p>当数据模型类写好之后，通过执行Django的数据迁移操作（<code>python manage.py makemigrations</code>, <code>python manage.py migrate</code>)就能够创建相应的数据库表，用来保存网站项目的数据。以后要更改数据库表的结构，只需要更改数据模型类，迁移数据就能实现数据库结构的调整。</p>
+<p>若想改为MySQL数据库,只需要在settings.py文件中做好新数据库的配置，然后进行迁移数据的操作即可完成数据库的迁移，不需要对ORM进行任何修改。</p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Kun</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://yoursite.com/post/eeec02ce.html">http://yoursite.com/post/eeec02ce.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://yoursite.com">Kun少侠</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Django/">Django    </a></div><div class="post_share"><div class="social-share" data-image="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1568199484409&amp;di=eccc641c2d21a3dad67ddeae7df716ce&amp;imgtype=0&amp;src=http%3A%2F%2Fn.sinaimg.cn%2Ftranslate%2Fw1280h720%2F20171204%2Fqa_i-fypikwt6342432.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script></div></div><div class="post-reward"><a class="reward-buttom"><i class="fa fa-qrcode"></i> 打赏<div class="reward-main"><ul class="reward-all"><li class="reward-item"><img class="lozad post-qr-code__img" src="/img/wechat.jpeg"><div class="post-qr-code__desc">微信</div></li><li class="reward-item"><img class="lozad post-qr-code__img" src="/img/alipay.jpeg"><div class="post-qr-code__desc">支付寶</div></li></ul></div></a></div><nav class="pagination_post" id="pagination"><div class="prev-post pull-left"><a href="/post/1770f1b2.html"><img class="prev_cover lozad" data-src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3893126993,4158605465&amp;fm=26&amp;gp=0.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">上一篇</div><div class="prev_info"><span>Java自学笔记</span></div></a></div><div class="next-post pull-right"><a href="/post/eb6ee242.html"><img class="next_cover lozad" data-src="http://b-ssl.duitang.com/uploads/item/201612/13/20161213154536_AGv84.jpeg" onerror="onerror=null;src='/img/404.jpg'"><div class="label">下一篇</div><div class="next_info"><span>博客搭建相册</span></div></a></div></nav><hr><div id="post-comment"><div class="comment_headling"><i class="fa fa-comments fa-fw" aria-hidden="true"></i><span> 评论</span></div><div class="vcomment" id="vcomment"></div><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = false == true ? true : false;
+var verify = false == true ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'xMbcobu5cxbsqvIle4A2xSOS-gzGzoHsz',
+  appKey:'CQjVfMpnGszY0NLIh8gmonno',
+  placeholder:'Please leave your footprints',
+  avatar:'monsterid',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang:'en',
+  recordIP: true
+});</script></div></div></div><footer><div id="footer"><div class="copyright">&copy;2019 By Kun</div><div class="footer_custom_text">Follow Your Dream</div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><section class="rightside" id="rightside"><a id="to_comment" href="#post-comment"><i class="scroll_to_comment fa fa-comments"></i></a><i class="fa fa-book" id="readmode" title="阅读模式"> </i><i class="fa fa-plus" id="font_plus" title="放大字体"></i><i class="fa fa-minus" id="font_minus" title="缩小字体"></i><a class="translate_chn_to_cht" id="translateLink" href="javascript:translatePage();" title="简繁转换">繁</a><i class="nightshift fa fa-moon-o" id="nightshift" title="夜间模式"></i></section><div class=" " id="post_bottom"><div id="post_bottom_items"><a id="mobile_to_comment" href="#post-comment"><i class="mobile_scroll_to_comment fa fa-comments"></i></a><i class="fa fa-list" id="mobile_toc"></i><div id="toc_mobile"><div class="toc_mobile_headline">目录</div><ol class="toc_mobile_items"><li class="toc_mobile_items-item toc_mobile_items-level-1"><a class="toc_mobile_items-link" href="#Ubuntu-Django2-1-2-Python3"><span class="toc_mobile_items-number">1.</span> <span class="toc_mobile_items-text">Ubuntu + Django2.1.2 +Python3</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-2"><a class="toc_mobile_items-link" href="#1、简单博客系统"><span class="toc_mobile_items-number">1.1.</span> <span class="toc_mobile_items-text">1、简单博客系统</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#1-1-Django-入门"><span class="toc_mobile_items-number">1.1.1.</span> <span class="toc_mobile_items-text">1.1 Django 入门</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#1-1-1-Django"><span class="toc_mobile_items-number">1.1.1.1.</span> <span class="toc_mobile_items-text">1.1.1 Django</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#1-1-2-安装Django-Python3"><span class="toc_mobile_items-number">1.1.1.2.</span> <span class="toc_mobile_items-text">1.1.2 安装Django(Python3)</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#1-1-3-创建项目（project"><span class="toc_mobile_items-number">1.1.1.3.</span> <span class="toc_mobile_items-text">1.1.3 创建项目（project)</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#1-1-4-创建应用-application"><span class="toc_mobile_items-number">1.1.1.4.</span> <span class="toc_mobile_items-text">1.1.4 创建应用(application)</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-5"><a class="toc_mobile_items-link" href="#1-manage-py"><span class="toc_mobile_items-number">1.1.1.4.1.</span> <span class="toc_mobile_items-text">1. manage.py</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-5"><a class="toc_mobile_items-link" href="#2-mysite"><span class="toc_mobile_items-number">1.1.1.4.2.</span> <span class="toc_mobile_items-text">2. mysite</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-5"><a class="toc_mobile_items-link" href="#3-blog"><span class="toc_mobile_items-number">1.1.1.4.3.</span> <span class="toc_mobile_items-text">3. blog</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-5"><a class="toc_mobile_items-link" href="#4-db-sqlite3"><span class="toc_mobile_items-number">1.1.1.4.4.</span> <span class="toc_mobile_items-text">4. db.sqlite3</span></a></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#1-1-5-网站的配置"><span class="toc_mobile_items-number">1.1.1.5.</span> <span class="toc_mobile_items-text">1.1.5 网站的配置</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#1-1-6-知识点"><span class="toc_mobile_items-number">1.1.1.6.</span> <span class="toc_mobile_items-text">1.1.6 知识点</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-5"><a class="toc_mobile_items-link" href="#1-开发模式"><span class="toc_mobile_items-number">1.1.1.6.1.</span> <span class="toc_mobile_items-text">1. 开发模式</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-5"><a class="toc_mobile_items-link" href="#2-项目和应用"><span class="toc_mobile_items-number">1.1.1.6.2.</span> <span class="toc_mobile_items-text">2. 项目和应用</span></a></li></ol></li></ol></li><li class="toc_mobile_items-item toc_mobile_items-level-3"><a class="toc_mobile_items-link" href="#1-2-编写博客的数据模型类"><span class="toc_mobile_items-number">1.1.2.</span> <span class="toc_mobile_items-text">1.2 编写博客的数据模型类</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#1-2-1-数据模型类"><span class="toc_mobile_items-number">1.1.2.1.</span> <span class="toc_mobile_items-text">1.2.1 数据模型类</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#1-2-2-发布博客文章"><span class="toc_mobile_items-number">1.1.2.2.</span> <span class="toc_mobile_items-text">1.2.2 发布博客文章</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-4"><a class="toc_mobile_items-link" href="#1-2-3-知识点"><span class="toc_mobile_items-number">1.1.2.3.</span> <span class="toc_mobile_items-text">1.2.3 知识点</span></a><ol class="toc_mobile_items-child"><li class="toc_mobile_items-item toc_mobile_items-level-5"><a class="toc_mobile_items-link" href="#1-HTTP"><span class="toc_mobile_items-number">1.1.2.3.1.</span> <span class="toc_mobile_items-text">1. HTTP</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-5"><a class="toc_mobile_items-link" href="#2-URL"><span class="toc_mobile_items-number">1.1.2.3.2.</span> <span class="toc_mobile_items-text">2. URL</span></a></li><li class="toc_mobile_items-item toc_mobile_items-level-5"><a class="toc_mobile_items-link" href="#3-模型：-ORM"><span class="toc_mobile_items-number">1.1.2.3.3.</span> <span class="toc_mobile_items-text">3. 模型： ORM</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script type="text/x-mathjax-config">MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+    processEscapes: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  CommonHTML: {
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "HTML-CSS": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  },
+  "SVG": { 
+    linebreaks: { automatic: true, width: "90% container" }
+  }
+});
+</script><script type="text/x-mathjax-config">MathJax.Hub.Queue(function() {
+  var all = MathJax.Hub.getAllJax(), i;
+  for (i=0; i < all.length; i += 1) {
+    all[i].SourceElement().parentNode.className += ' has-jax';
+  }
+});
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script async src="/js/search/local-search.js"></script><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="/js/third-party/fireworks.js"></script><script src="/js/nightshift.js"></script><script id="ribbon" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/js/piao.js"></script><script color="0,0,255" opacity="0.7" zindex="-1" count="99" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN/js/canvas-nest.js"></script><script src="/js/activate-power-mode.js"></script><script>POWERMODE.colorful = true; // make power mode colorful
+POWERMODE.shake = true; // turn off shake
+document.body.addEventListener('input', POWERMODE);
+</script><script src="/js/tw_cn.js"></script><script>translateInitilization()
+
+</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@1.2.2/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script><script>const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":100,"height":200,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.3},"log":false});</script></body></html>
