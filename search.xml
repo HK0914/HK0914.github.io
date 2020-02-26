@@ -2438,56 +2438,6 @@
       </tags>
   </entry>
   <entry>
-    <title>categories</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>gallery</title>
-    <url>/gallery/index.html</url>
-    <content><![CDATA[<p><strong>2017</strong><br>
-    <div class="gallery-item" style="background-image: url('https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-03_%E6%A2%B5%E5%87%80%E5%B1%B11.jpg?raw=true')" data-title="梵净山1" data-url="https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-03_%E6%A2%B5%E5%87%80%E5%B1%B11.jpg?raw=true">
-      <div class="gallery-item__title">
-        梵净山1
-      </div>
-    </div>
-  </p>
-
-    <div class="gallery-item" style="background-image: url('https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-03_%E6%A2%B5%E5%87%80%E5%B1%B12.jpg?raw=true')" data-title="梵净山2" data-url="https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-03_%E6%A2%B5%E5%87%80%E5%B1%B12.jpg?raw=true">
-      <div class="gallery-item__title">
-        梵净山2
-      </div>
-    </div>
-  
-
-    <div class="gallery-item" style="background-image: url('https://github.com/HK0914/blog_photos/blob/master/photos/2017-7-31_%E8%A5%BF%E6%B1%9F%E5%8D%83%E6%88%B7%E8%8B%97%E5%AF%A81.jpg?raw=true')" data-title="西江千户苗寨1" data-url="https://github.com/HK0914/blog_photos/blob/master/photos/2017-7-31_%E8%A5%BF%E6%B1%9F%E5%8D%83%E6%88%B7%E8%8B%97%E5%AF%A81.jpg?raw=true">
-      <div class="gallery-item__title">
-        西江千户苗寨1
-      </div>
-    </div>
-  
-
-    <div class="gallery-item" style="background-image: url('https://github.com/HK0914/blog_photos/blob/master/photos/2017-7-31_%E8%A5%BF%E6%B1%9F%E5%8D%83%E6%88%B7%E8%8B%97%E5%AF%A82.jpg?raw=true')" data-title="西江千户苗寨2" data-url="https://github.com/HK0914/blog_photos/blob/master/photos/2017-7-31_%E8%A5%BF%E6%B1%9F%E5%8D%83%E6%88%B7%E8%8B%97%E5%AF%A82.jpg?raw=true">
-      <div class="gallery-item__title">
-        西江千户苗寨2
-      </div>
-    </div>
-  
-
-    <div class="gallery-item" style="background-image: url('https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-6_%E5%BC%A0%E5%AE%B6%E7%95%8C1.jpg?raw=true')" data-title="张家界1" data-url="https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-6_%E5%BC%A0%E5%AE%B6%E7%95%8C1.jpg?raw=true">
-      <div class="gallery-item__title">
-        张家界1
-      </div>
-    </div>
-  
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title></title>
     <url>/about/index.html</url>
     <content><![CDATA[
@@ -2689,9 +2639,81 @@ return xmlHttp;
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":100,"height":200,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.3},"log":false});</script></body></html>]]></content>
   </entry>
   <entry>
+    <title>categories</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>gallery</title>
+    <url>/gallery/index.html</url>
+    <content><![CDATA[<p><strong>2017</strong><br>
+    <div class="gallery-item" style="background-image: url('https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-03_%E6%A2%B5%E5%87%80%E5%B1%B11.jpg?raw=true')" data-title="梵净山1" data-url="https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-03_%E6%A2%B5%E5%87%80%E5%B1%B11.jpg?raw=true">
+      <div class="gallery-item__title">
+        梵净山1
+      </div>
+    </div>
+  </p>
+
+    <div class="gallery-item" style="background-image: url('https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-03_%E6%A2%B5%E5%87%80%E5%B1%B12.jpg?raw=true')" data-title="梵净山2" data-url="https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-03_%E6%A2%B5%E5%87%80%E5%B1%B12.jpg?raw=true">
+      <div class="gallery-item__title">
+        梵净山2
+      </div>
+    </div>
+  
+
+    <div class="gallery-item" style="background-image: url('https://github.com/HK0914/blog_photos/blob/master/photos/2017-7-31_%E8%A5%BF%E6%B1%9F%E5%8D%83%E6%88%B7%E8%8B%97%E5%AF%A81.jpg?raw=true')" data-title="西江千户苗寨1" data-url="https://github.com/HK0914/blog_photos/blob/master/photos/2017-7-31_%E8%A5%BF%E6%B1%9F%E5%8D%83%E6%88%B7%E8%8B%97%E5%AF%A81.jpg?raw=true">
+      <div class="gallery-item__title">
+        西江千户苗寨1
+      </div>
+    </div>
+  
+
+    <div class="gallery-item" style="background-image: url('https://github.com/HK0914/blog_photos/blob/master/photos/2017-7-31_%E8%A5%BF%E6%B1%9F%E5%8D%83%E6%88%B7%E8%8B%97%E5%AF%A82.jpg?raw=true')" data-title="西江千户苗寨2" data-url="https://github.com/HK0914/blog_photos/blob/master/photos/2017-7-31_%E8%A5%BF%E6%B1%9F%E5%8D%83%E6%88%B7%E8%8B%97%E5%AF%A82.jpg?raw=true">
+      <div class="gallery-item__title">
+        西江千户苗寨2
+      </div>
+    </div>
+  
+
+    <div class="gallery-item" style="background-image: url('https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-6_%E5%BC%A0%E5%AE%B6%E7%95%8C1.jpg?raw=true')" data-title="张家界1" data-url="https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-6_%E5%BC%A0%E5%AE%B6%E7%95%8C1.jpg?raw=true">
+      <div class="gallery-item__title">
+        张家界1
+      </div>
+    </div>
+  
+]]></content>
+  </entry>
+  <entry>
     <title></title>
     <url>/photos/data.json</url>
     <content><![CDATA[{"list":[{"date":"2017-8-","arr":{"year":2017,"month":8,"link":["2017-8-6_张家界1.jpg","2017-8-03_梵净山2.jpg","2017-8-03_梵净山1.jpg"],"text":["张家界1","梵净山2","梵净山1"],"type":["image","image","image"]}},{"date":"2017-7-","arr":{"year":2017,"month":7,"link":["2017-7-31_西江千户苗寨2.jpg","2017-7-31_西江千户苗寨1.jpg","2017-7-26_安顺黄果树风景区1.jpg"],"text":["西江千户苗寨2","西江千户苗寨1","安顺黄果树风景区1"],"type":["image","image","image"]}}]}]]></content>
+  </entry>
+  <entry>
+    <title>我的相册</title>
+    <url>/photos/index.html</url>
+    <content><![CDATA[<p><link rel="stylesheet" href="./ins.css"><br> <link rel="stylesheet" href="./photoswipe.css"> </p>
+<link rel="stylesheet" href="./default-skin/default-skin.css"> 
+
+<p><div class="photos-btn-wrap">
+    <a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="noopener">Photos</a>
+</div></p>
+<p><div class="instagram itemscope">
+    <a href="https://HK0914.github.io" target="_blank" class="open-ins">图片正在加载中…</a>
+</div></p>
+<script>
+  (function() {
+    var loadScript = function(path) {
+      var $script = document.createElement('script')
+      document.getElementsByTagName('body')[0].appendChild($script)
+      $script.setAttribute('src', path)
+    }
+    setTimeout(function() {
+        loadScript('./ins.js')
+    }, 0)
+  })()
+</script>
+
+]]></content>
   </entry>
   <entry>
     <title></title>
@@ -3034,31 +3056,9 @@ figure {
   text-decoration: underline; }]]></content>
   </entry>
   <entry>
-    <title>我的相册</title>
-    <url>/photos/index.html</url>
-    <content><![CDATA[<p><link rel="stylesheet" href="./ins.css"><br> <link rel="stylesheet" href="./photoswipe.css"> </p>
-<link rel="stylesheet" href="./default-skin/default-skin.css"> 
-
-<p><div class="photos-btn-wrap">
-    <a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="noopener">Photos</a>
-</div></p>
-<p><div class="instagram itemscope">
-    <a href="https://HK0914.github.io" target="_blank" class="open-ins">图片正在加载中…</a>
-</div></p>
-<script>
-  (function() {
-    var loadScript = function(path) {
-      var $script = document.createElement('script')
-      document.getElementsByTagName('body')[0].appendChild($script)
-      $script.setAttribute('src', path)
-    }
-    setTimeout(function() {
-        loadScript('./ins.js')
-    }, 0)
-  })()
-</script>
-
-]]></content>
+    <title></title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title></title>
