@@ -9,7 +9,7 @@
     <section data-id="86043" style="line-height: 25.6px;font-family: 微软雅黑;border-width: 0px;border-style: none;" mpa-from-tpl="t">
       <section style="margin-top: 20px;margin-bottom: 20px;padding: 15px 20px;border-radius: 20px;word-break: break-all;border-width: 3px;border-style: groove;border-color: rgb(237, 237, 237);" mpa-from-tpl="t">
         <p style="font-size: 16px;line-height: 1.75em;">
-          <span style="font-size: 14px;color: rgb(71, 71, 71);letter-spacing: 2px;" mpa-is-content="t"><img data-ratio="0.7016666666666667" data-type="jpeg" data-w="600" style data-src="https://mmbiz.qpic.cn/mmbiz_jpg/WO2hoibPMGkUtLKNkIPYJaLjsv4ibwSPJOLOZBnOVsuzpbVtrkx5LSAFEXptxhX6ocLpO1pnFpNk8IujsAjpO6HQ/640?wx_fmt=jpeg" class="lozad"></span> 
+          <span style="font-size: 14px;color: rgb(71, 71, 71);letter-spacing: 2px;" mpa-is-content="t"><img data-ratio="0.7016666666666667" data-type="jpg" data-w="600" style data-src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3889996353,72546810&fm=11&gp=0.jpg" class="lozad"></span> 
           <mpchecktext contenteditable="false" id="1582717336042_0.18890780535112794">
           </mpchecktext>
         </p>
@@ -509,7 +509,7 @@
             </mpchecktext></span>
         </p>
         <p style="text-align: center;">
-          <img class="rich_pages lozad" data-backh="340" data-backw="500" data-ratio="0.68" data-s="300,640" data-type="jpeg" data-w="500" style="border-color: rgb(0, 0, 0);border-style: solid;border-width: 2px;width: 100%;height: auto;" data-src="https://mmbiz.qpic.cn/mmbiz_jpg/WO2hoibPMGkVhibnauWXvQIj3ZCmfWNPq0FjN25kVucKDlb9Ifu6qWE1d6Htj5GmFbqicSFDjQRjsjQRWyQKBucCQ/640?wx_fmt=jpeg">
+          <img class="rich_pages lozad" data-backh="340" data-backw="500" data-ratio="0.68" data-s="300,640" data-type="jpg" data-w="500" style="border-color: rgb(0, 0, 0);border-style: solid;border-width: 2px;width: 100%;height: auto;" data-src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1006733607,2233191401&fm=26&gp=0.jpg">
         </p>
         <p style="line-height: 1.75em;margin-left: 0.5em;margin-right: 0.5em;">
           <span style="font-size: 14px;color: rgb(71, 71, 71);letter-spacing: 2px;" mpa-is-content="t">哈哈，上面这个图片还是过分夸张啦，不过其好友<strong>陈亮</strong>的这个描述才是符合辛猛人的吧——“<strong>眼光有棱，足以照映一世之豪；<mpchecktext contenteditable="false" id="1582717336173_0.084437454073085">
@@ -586,7 +586,7 @@
               </section>
               <section style="width: 55%;padding-left: 10px;" data-width="55%" mpa-from-tpl="t">
                 <p style="margin: 0px;color: rgb(248, 111, 111);line-height: 30px;" data-brushtype="text">
-                  <span style="display: inline-block;width: 20px;background-color:#f86f6f;"><img data-ratio="0.7333333333333333" data-w="30" data-width="100%" style="width: 100%;display: block;" data-src="https://mmbiz.qpic.cn/mmbiz_png/b96CibCt70iaaBAicDNCSs6H0O0SBGSALfn3pLQeISkqtpR3Rvibw9bhTU3ibibzMKUiaH9pJ0WoSl0HW38lcmyWuzMKA/640" class="lozad"></span>长按识别二维码
+                  <span style="display: inline-block;width: 20px;background-color:#f86f6f;"><img data-ratio="0.7333333333333333" data-w="30" data-width="100%" style="width: 100%;display: block;" data-src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2421048575,3384721293&fm=26&gp=0.jpg" class="lozad"></span>
                   <mpchecktext contenteditable="false" id="1582717336194_0.1653221848870543">
                   </mpchecktext>
                 </p>
@@ -2438,6 +2438,56 @@
       </tags>
   </entry>
   <entry>
+    <title>categories</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>gallery</title>
+    <url>/gallery/index.html</url>
+    <content><![CDATA[<p><strong>2017</strong><br>
+    <div class="gallery-item" style="background-image: url('https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-03_%E6%A2%B5%E5%87%80%E5%B1%B11.jpg?raw=true')" data-title="梵净山1" data-url="https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-03_%E6%A2%B5%E5%87%80%E5%B1%B11.jpg?raw=true">
+      <div class="gallery-item__title">
+        梵净山1
+      </div>
+    </div>
+  </p>
+
+    <div class="gallery-item" style="background-image: url('https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-03_%E6%A2%B5%E5%87%80%E5%B1%B12.jpg?raw=true')" data-title="梵净山2" data-url="https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-03_%E6%A2%B5%E5%87%80%E5%B1%B12.jpg?raw=true">
+      <div class="gallery-item__title">
+        梵净山2
+      </div>
+    </div>
+  
+
+    <div class="gallery-item" style="background-image: url('https://github.com/HK0914/blog_photos/blob/master/photos/2017-7-31_%E8%A5%BF%E6%B1%9F%E5%8D%83%E6%88%B7%E8%8B%97%E5%AF%A81.jpg?raw=true')" data-title="西江千户苗寨1" data-url="https://github.com/HK0914/blog_photos/blob/master/photos/2017-7-31_%E8%A5%BF%E6%B1%9F%E5%8D%83%E6%88%B7%E8%8B%97%E5%AF%A81.jpg?raw=true">
+      <div class="gallery-item__title">
+        西江千户苗寨1
+      </div>
+    </div>
+  
+
+    <div class="gallery-item" style="background-image: url('https://github.com/HK0914/blog_photos/blob/master/photos/2017-7-31_%E8%A5%BF%E6%B1%9F%E5%8D%83%E6%88%B7%E8%8B%97%E5%AF%A82.jpg?raw=true')" data-title="西江千户苗寨2" data-url="https://github.com/HK0914/blog_photos/blob/master/photos/2017-7-31_%E8%A5%BF%E6%B1%9F%E5%8D%83%E6%88%B7%E8%8B%97%E5%AF%A82.jpg?raw=true">
+      <div class="gallery-item__title">
+        西江千户苗寨2
+      </div>
+    </div>
+  
+
+    <div class="gallery-item" style="background-image: url('https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-6_%E5%BC%A0%E5%AE%B6%E7%95%8C1.jpg?raw=true')" data-title="张家界1" data-url="https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-6_%E5%BC%A0%E5%AE%B6%E7%95%8C1.jpg?raw=true">
+      <div class="gallery-item__title">
+        张家界1
+      </div>
+    </div>
+  
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title></title>
     <url>/about/index.html</url>
     <content><![CDATA[
@@ -2639,41 +2689,9 @@ return xmlHttp;
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"superSample":2,"width":100,"height":200,"position":"right","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.3},"log":false});</script></body></html>]]></content>
   </entry>
   <entry>
-    <title>categories</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title></title>
     <url>/photos/data.json</url>
     <content><![CDATA[{"list":[{"date":"2017-8-","arr":{"year":2017,"month":8,"link":["2017-8-6_张家界1.jpg","2017-8-03_梵净山2.jpg","2017-8-03_梵净山1.jpg"],"text":["张家界1","梵净山2","梵净山1"],"type":["image","image","image"]}},{"date":"2017-7-","arr":{"year":2017,"month":7,"link":["2017-7-31_西江千户苗寨2.jpg","2017-7-31_西江千户苗寨1.jpg","2017-7-26_安顺黄果树风景区1.jpg"],"text":["西江千户苗寨2","西江千户苗寨1","安顺黄果树风景区1"],"type":["image","image","image"]}}]}]]></content>
-  </entry>
-  <entry>
-    <title>我的相册</title>
-    <url>/photos/index.html</url>
-    <content><![CDATA[<p><link rel="stylesheet" href="./ins.css"><br> <link rel="stylesheet" href="./photoswipe.css"> </p>
-<link rel="stylesheet" href="./default-skin/default-skin.css"> 
-
-<p><div class="photos-btn-wrap">
-    <a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="noopener">Photos</a>
-</div></p>
-<p><div class="instagram itemscope">
-    <a href="https://HK0914.github.io" target="_blank" class="open-ins">图片正在加载中…</a>
-</div></p>
-<script>
-  (function() {
-    var loadScript = function(path) {
-      var $script = document.createElement('script')
-      document.getElementsByTagName('body')[0].appendChild($script)
-      $script.setAttribute('src', path)
-    }
-    setTimeout(function() {
-        loadScript('./ins.js')
-    }, 0)
-  })()
-</script>
-
-]]></content>
   </entry>
   <entry>
     <title></title>
@@ -3016,49 +3034,31 @@ figure {
   text-decoration: underline; }]]></content>
   </entry>
   <entry>
-    <title>gallery</title>
-    <url>/gallery/index.html</url>
-    <content><![CDATA[<p><strong>2017</strong><br>
-    <div class="gallery-item" style="background-image: url('https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-03_%E6%A2%B5%E5%87%80%E5%B1%B11.jpg?raw=true')" data-title="梵净山1" data-url="https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-03_%E6%A2%B5%E5%87%80%E5%B1%B11.jpg?raw=true">
-      <div class="gallery-item__title">
-        梵净山1
-      </div>
-    </div>
-  </p>
+    <title>我的相册</title>
+    <url>/photos/index.html</url>
+    <content><![CDATA[<p><link rel="stylesheet" href="./ins.css"><br> <link rel="stylesheet" href="./photoswipe.css"> </p>
+<link rel="stylesheet" href="./default-skin/default-skin.css"> 
 
-    <div class="gallery-item" style="background-image: url('https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-03_%E6%A2%B5%E5%87%80%E5%B1%B12.jpg?raw=true')" data-title="梵净山2" data-url="https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-03_%E6%A2%B5%E5%87%80%E5%B1%B12.jpg?raw=true">
-      <div class="gallery-item__title">
-        梵净山2
-      </div>
-    </div>
-  
+<p><div class="photos-btn-wrap">
+    <a class="photos-btn active" href="javascript:void(0)" target="_blank" rel="noopener">Photos</a>
+</div></p>
+<p><div class="instagram itemscope">
+    <a href="https://HK0914.github.io" target="_blank" class="open-ins">图片正在加载中…</a>
+</div></p>
+<script>
+  (function() {
+    var loadScript = function(path) {
+      var $script = document.createElement('script')
+      document.getElementsByTagName('body')[0].appendChild($script)
+      $script.setAttribute('src', path)
+    }
+    setTimeout(function() {
+        loadScript('./ins.js')
+    }, 0)
+  })()
+</script>
 
-    <div class="gallery-item" style="background-image: url('https://github.com/HK0914/blog_photos/blob/master/photos/2017-7-31_%E8%A5%BF%E6%B1%9F%E5%8D%83%E6%88%B7%E8%8B%97%E5%AF%A81.jpg?raw=true')" data-title="西江千户苗寨1" data-url="https://github.com/HK0914/blog_photos/blob/master/photos/2017-7-31_%E8%A5%BF%E6%B1%9F%E5%8D%83%E6%88%B7%E8%8B%97%E5%AF%A81.jpg?raw=true">
-      <div class="gallery-item__title">
-        西江千户苗寨1
-      </div>
-    </div>
-  
-
-    <div class="gallery-item" style="background-image: url('https://github.com/HK0914/blog_photos/blob/master/photos/2017-7-31_%E8%A5%BF%E6%B1%9F%E5%8D%83%E6%88%B7%E8%8B%97%E5%AF%A82.jpg?raw=true')" data-title="西江千户苗寨2" data-url="https://github.com/HK0914/blog_photos/blob/master/photos/2017-7-31_%E8%A5%BF%E6%B1%9F%E5%8D%83%E6%88%B7%E8%8B%97%E5%AF%A82.jpg?raw=true">
-      <div class="gallery-item__title">
-        西江千户苗寨2
-      </div>
-    </div>
-  
-
-    <div class="gallery-item" style="background-image: url('https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-6_%E5%BC%A0%E5%AE%B6%E7%95%8C1.jpg?raw=true')" data-title="张家界1" data-url="https://github.com/HK0914/blog_photos/blob/master/photos/2017-8-6_%E5%BC%A0%E5%AE%B6%E7%95%8C1.jpg?raw=true">
-      <div class="gallery-item__title">
-        张家界1
-      </div>
-    </div>
-  
 ]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title></title>
