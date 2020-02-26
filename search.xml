@@ -87,11 +87,6 @@
     <content type="text"><![CDATA[{"list":[{"date":"2017-8-","arr":{"year":2017,"month":8,"link":["2017-8-6_张家界1.jpg","2017-8-03_梵净山2.jpg","2017-8-03_梵净山1.jpg"],"text":["张家界1","梵净山2","梵净山1"],"type":["image","image","image"]}},{"date":"2017-7-","arr":{"year":2017,"month":7,"link":["2017-7-31_西江千户苗寨2.jpg","2017-7-31_西江千户苗寨1.jpg","2017-7-26_安顺黄果树风景区1.jpg"],"text":["西江千户苗寨2","西江千户苗寨1","安顺黄果树风景区1"],"type":["image","image","image"]}}]}]]></content>
   </entry>
   <entry>
-    <title><![CDATA[gallery]]></title>
-    <url>%2Fgallery%2Findex.html</url>
-    <content type="text"><![CDATA[2017 梵净山1 梵净山2 西江千户苗寨1 西江千户苗寨2 张家界1]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[我的相册]]></title>
     <url>%2Fphotos%2Findex.html</url>
     <content type="text"><![CDATA[Photos 图片正在加载中… (function() { var loadScript = function(path) { var $script = document.createElement('script') document.getElementsByTagName('body')[0].appendChild($script) $script.setAttribute('src', path) } setTimeout(function() { loadScript('./ins.js') }, 0) })()]]></content>
@@ -110,6 +105,11 @@
     <title></title>
     <url>%2Ftags%2Findex.html</url>
     <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[gallery]]></title>
+    <url>%2Fgallery%2Findex.html</url>
+    <content type="text"><![CDATA[2017 梵净山1 梵净山2 西江千户苗寨1 西江千户苗寨2 张家界1]]></content>
   </entry>
   <entry>
     <title></title>
